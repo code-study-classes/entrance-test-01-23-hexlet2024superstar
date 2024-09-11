@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 const filePath = path.join(__dirname, '..', '__fixtures__', 'hotels.csv');
 const content = fs.readFileSync(filePath, 'utf-8');
 
-console.log(content);
+// console.log(content);
 // console.log(content2);
 
 showInfo(content);

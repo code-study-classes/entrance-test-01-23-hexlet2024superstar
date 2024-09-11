@@ -13,9 +13,10 @@ const svitch = (data) => {
 const showInfo = (content) => {
     // task1
     const data = norm(content);
-    console.log(`Count: ${data.length}`);
-
     const sortedList = svitch(data);
     console.log(`Stat: ${sortedList.join(', ')}`);
+
+    
 };
+
 export default showInfo;
