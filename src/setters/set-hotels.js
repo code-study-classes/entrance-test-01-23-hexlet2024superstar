@@ -13,7 +13,7 @@ const setHotel = () => {
         const [, name] = string.split(';');
         return name === regionToAdd ? true : false;
     });
-    console.log(filtered)
+    console.log(filtered);
 
     let regionId;
     if (filtered.length !==0) {
