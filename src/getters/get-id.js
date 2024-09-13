@@ -1,7 +1,7 @@
 import reader from "../hotels.js";
 
 const getId = (fPath) => {
-    const id = reader(fPath).split('\n').length;
+    const id = reader(fPath).length;
     return id;
 }
 

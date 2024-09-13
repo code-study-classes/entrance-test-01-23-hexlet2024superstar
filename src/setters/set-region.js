@@ -2,11 +2,17 @@ import updater from '../file-upduter.js';
 import getId from '../getters/get-id.js';
 import readlineSync from 'readline-sync'
 
-const region = (fPath) => {
-    const newRegion = readlineSync.question('New region:').toLowerCase().trim();
-    const id = getId(fPath);
-    updater(fPath, `\n${id}|${newRegion}`);
+const setRegion = (name='') => {
+    let newRegion;
+    if (name === '') {
+        newRegion = readlineSync.question('New region:')
+        .toLowerCase().trim();
+    } else {
+        newRegion = name;
+    }
+    const id = getId('data/regions.csv');
+    updater('data/regions.csv', `\n${id};${newRegion}`);
+    return id;
 };
 
-region('data/regions.csv')
-export default region;
+export default setRegion;
